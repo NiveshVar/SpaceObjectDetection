@@ -1,6 +1,6 @@
-# 🚀 Space Station Safety Equipment Detection
+# Space Station Safety Equipment Detection
 
-## 🌌 Project Overview
+##  Project Overview
 
 This project implements a cutting-edge **AI-powered object detection system** specifically designed for identifying critical safety equipment in space station environments. Developed for the **Duality AI Space Station Hackathon**, our solution leverages **YOLO (You Only Look Once) architecture** and **synthetic data from Duality AI's Falcon digital twin platform** to create a robust, real-time safety monitoring system.
 
@@ -8,21 +8,21 @@ The system addresses the critical challenge of automated safety equipment monito
 
 ---
 
-## 🎯 Key Features
+##  Key Features
 
-### 🔍 Advanced Detection Capabilities
+###  Advanced Detection Capabilities
 - **Real-time Object Detection**: 20ms inference time per image enabling live video processing
 - **7 Safety Equipment Classes**: Comprehensive coverage of critical space station safety items
 - **High Precision Operations**: 84.8% precision ensuring reliable detections
 - **Multi-scale Detection**: Effective identification of both large and small safety equipment
 
-### 🌐 User-Friendly Interface
+###  User-Friendly Interface
 - **Web Application**: Intuitive Gradio-based interface for easy interaction
 - **Mobile Responsive**: Optimized for tablets, phones, and desktop systems
 - **Real-time Visualization**: Instant bounding box annotations and confidence scores
 - **Batch Processing**: Support for multiple image upload and processing
 
-### 🔧 Technical Excellence
+###  Technical Excellence
 - **Model Performance**: 71.2% mAP@0.5, significantly exceeding the 40-50% benchmark
 - **Continuous Learning**: Integration with Falcon digital twin for ongoing model improvements
 - **Production Ready**: Scalable architecture suitable for deployment in actual space station systems
@@ -30,30 +30,30 @@ The system addresses the critical challenge of automated safety equipment monito
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 | Metric | Score | Benchmark | Status |
 |--------|-------|-----------|---------|
-| **mAP@0.5** | 71.2% | 40-50% | ✅ **Exceeded** |
-| **Precision** | 84.8% | >70% | ✅ **Exceeded** |
-| **Recall** | 63.0% | >50% | ✅ **Exceeded** |
-| **Inference Speed** | 20ms/image | <50ms | ✅ **Exceeded** |
-| **Model Size** | 22.5MB | <100MB | ✅ **Optimized** |
+| **mAP@0.5** | 71.2% | 40-50% |  **Exceeded** |
+| **Precision** | 84.8% | >70% |  **Exceeded** |
+| **Recall** | 63.0% | >50% |  **Exceeded** |
+| **Inference Speed** | 20ms/image | <50ms |  **Exceeded** |
+| **Model Size** | 22.5MB | <100MB |  **Optimized** |
 
 ### Class-wise Performance
 | Safety Equipment | mAP@0.5 | Precision | Recall | Status |
 |------------------|---------|-----------|--------|---------|
-| **Oxygen Tank** | 81.8% | 89.2% | 74.7% | 🏆 Excellent |
-| **Nitrogen Tank** | 75.3% | 88.7% | 65.0% | 🏆 Excellent |
-| **First Aid Box** | 79.4% | 77.3% | 70.6% | 🏆 Excellent |
-| **Fire Alarm** | 75.1% | 90.8% | 69.6% | 🏆 Excellent |
-| **Safety Switch Panel** | 58.6% | 72.2% | 50.0% | ⚠️ Good |
-| **Emergency Phone** | 60.8% | 90.0% | 53.6% | ⚠️ Good |
-| **Fire Extinguisher** | 67.7% | 85.2% | 57.6% | ✅ Good |
+| **Oxygen Tank** | 81.8% | 89.2% | 74.7% |  Excellent |
+| **Nitrogen Tank** | 75.3% | 88.7% | 65.0% |  Excellent |
+| **First Aid Box** | 79.4% | 77.3% | 70.6% |  Excellent |
+| **Fire Alarm** | 75.1% | 90.8% | 69.6% |  Excellent |
+| **Safety Switch Panel** | 58.6% | 72.2% | 50.0% |  Good |
+| **Emergency Phone** | 60.8% | 90.0% | 53.6% |  Good |
+| **Fire Extinguisher** | 67.7% | 85.2% | 57.6% |  Good |
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -112,7 +112,7 @@ python scripts/train.py --epochs 50 --batch-size 16
 
 ---
 
-## 🚀 Usage Guide
+##  Usage Guide
 
 ### Web Application
 ```bash
@@ -150,30 +150,30 @@ python scripts/train.py --resume runs/detect/train/weights/last.pt
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 space-station-safety-detection/
-├── 📁 models/                          # Trained model weights
+├──  models/                          # Trained model weights
 │   ├── best.pt                        # Best performing model
 │   └── last.pt                        # Latest training checkpoint
-├── 📁 scripts/                        # Core functionality scripts
+├──  scripts/                        # Core functionality scripts
 │   ├── train.py                       # Model training script
 │   ├── predict.py                     # Inference and evaluation
 │   ├── visualize.py                   # Results visualization
 │   └── utils/                         # Utility functions
-├── 📁 config/                         # Configuration files
+├──  config/                         # Configuration files
 │   ├── yolo_params.yaml               # YOLO training configuration
 │   └── app_config.py                  # Application settings
-├── 📁 data/                           # Dataset and processing
+├──  data/                           # Dataset and processing
 │   ├── train/                         # Training images and labels
 │   ├── val/                           # Validation images and labels
 │   └── test/                          # Test images and labels
-├── 📁 examples/                       # Sample images for demonstration
+├──  examples/                       # Sample images for demonstration
 │   ├── space_station_1.jpg
 │   ├── space_station_2.jpg
 │   └── space_station_3.jpg
-├── 📁 runs/                           # Training outputs and results
+├──  runs/                           # Training outputs and results
 │   ├── detect/train/                  # Training run results
 │   └── detect/val/                    # Validation results
 ├── app.py                            # Main web application
@@ -184,27 +184,27 @@ space-station-safety-detection/
 
 ---
 
-## 🎨 Web Application Features
+##  Web Application Features
 
-### 🖼️ Image Upload & Processing
+###  Image Upload & Processing
 - **Drag & Drop Interface**: Intuitive file selection
 - **Multiple Format Support**: JPEG, PNG, BMP, TIFF compatibility
 - **Real-time Preview**: Immediate visual feedback
 - **Batch Upload**: Process multiple images simultaneously
 
-### 🔧 Detection Controls
+###  Detection Controls
 - **Confidence Adjustment**: Dynamic threshold from 0.1 to 0.9
 - **Class Filtering**: Selective detection of specific equipment types
 - **Processing Modes**: Real-time vs. batch optimization
 - **Export Options**: Multiple output format support
 
-### 📊 Results Visualization
+###  Results Visualization
 - **Color-coded Bounding Boxes**: Distinct colors for each equipment class
 - **Confidence Overlays**: Clear display of detection certainty
 - **Interactive Elements**: Click bounding boxes for detailed information
 - **Comparison Mode**: Side-by-side original vs. detected views
 
-### 📈 Analytics Dashboard
+###  Analytics Dashboard
 - **Real-time Metrics**: Live performance statistics
 - **Detection History**: Timeline of processed images
 - **Performance Charts**: Visual representation of model accuracy
@@ -212,7 +212,7 @@ space-station-safety-detection/
 
 ---
 
-## 🔧 Technical Architecture
+##  Technical Architecture
 
 ### AI/ML Stack
 - **Object Detection**: Ultralytics YOLOv8/YOLO11
@@ -234,21 +234,21 @@ space-station-safety-detection/
 
 ---
 
-## 🎯 Detection Classes
+##  Detection Classes
 
 The system is trained to detect 7 critical safety equipment categories:
 
-1. **🟦 Oxygen Tank** - Life support systems
-2. **🟪 Nitrogen Tank** - Environmental control systems  
-3. **🟩 First Aid Box** - Medical emergency equipment
-4. **🟥 Fire Alarm** - Fire detection and alert systems
-5. **🟨 Safety Switch Panel** - Emergency control interfaces
-6. **🟧 Emergency Phone** - Critical communication devices
-7. **🔴 Fire Extinguisher** - Fire suppression equipment
+1. ** Oxygen Tank** - Life support systems
+2. ** Nitrogen Tank** - Environmental control systems  
+3. ** First Aid Box** - Medical emergency equipment
+4. ** Fire Alarm** - Fire detection and alert systems
+5. ** Safety Switch Panel** - Emergency control interfaces
+6. ** Emergency Phone** - Critical communication devices
+7. ** Fire Extinguisher** - Fire suppression equipment
 
 ---
 
-## 📈 Model Development
+##  Model Development
 
 ### Training Strategy
 - **Transfer Learning**: Pre-trained on COCO dataset
@@ -270,21 +270,21 @@ The system is trained to detect 7 critical safety equipment categories:
 
 ---
 
-## 🌟 Unique Features
+##  Unique Features
 
-### 🚀 Space-Environment Optimized
+###  Space-Environment Optimized
 - **Lighting Adaptation**: Robust performance under variable lighting conditions
 - **Occlusion Handling**: Effective detection of partially visible equipment
 - **Angle Invariance**: Reliable detection from multiple camera perspectives
 - **Reflection Management**: Special handling of metallic surface reflections
 
-### 🔄 Continuous Improvement
+###  Continuous Improvement
 - **Digital Twin Integration**: Seamless connection with Falcon platform
 - **Automated Retraining**: Performance-triggered model updates
 - **Feedback Loops**: Crew input integration for model refinement
 - **Version Control**: Comprehensive model version management
 
-### 🛡️ Safety-First Design
+###  Safety-First Design
 - **High Reliability**: 84.8% precision for critical safety applications
 - **Failure Modes**: Graceful degradation and error handling
 - **Alert Systems**: Automated notification of detection issues
@@ -292,7 +292,7 @@ The system is trained to detect 7 critical safety equipment categories:
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 ### Planned Improvements
 - **Additional Equipment Classes**: Expand detection to 15+ safety items
@@ -308,7 +308,7 @@ The system is trained to detect 7 critical safety equipment categories:
 
 ---
 
-## 👥 Team & Acknowledgments
+##  Team & Acknowledgments
 
 ### Development Team
 - **Lead Developer**: [Your Name/Team Name]
@@ -327,13 +327,13 @@ This project was developed as part of the **Duality AI Space Station Hackathon**
 
 ---
 
-## 📄 License
+##  License
 
 This project is developed for educational and research purposes as part of the Duality AI Hackathon. Please refer to the LICENSE file for detailed terms and conditions.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 While this is primarily a hackathon project, we welcome feedback and suggestions:
 
@@ -347,7 +347,7 @@ For major changes, please open an issue first to discuss proposed modifications.
 ---
 
 
-## 🎉 Conclusion
+##  Conclusion
 
 This Space Station Safety Equipment Detection system represents a significant step forward in automated safety monitoring for space environments. By combining state-of-the-art object detection with synthetic data generation, we've created a solution that not only meets but exceeds performance benchmarks while demonstrating the practical application of AI in critical safety scenarios.
 
