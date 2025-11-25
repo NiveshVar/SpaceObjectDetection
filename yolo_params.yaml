@@ -1,0 +1,11 @@
+# CURRENT (needs fixing):
+train: #path to training folder(s)
+val: #path to validation folder(s)  
+test: #path to testing images
+
+# NEED TO UPDATE TO (example):
+train: F:/Avishkar/Hackathon2_scripts/Hackathon2_scripts/train
+val: F:/Avishkar/Hackathon2_scripts/Hackathon2_scripts/train_2/val2
+test: F:/Avishkar/Hackathon2_scripts/Hackathon2_scripts/train_2/train2
+nc: 7
+names: ['OxygenTank', 'NitrogenTank', 'FirstAidBox', 'FireAlarm', 'SafetySwitchPanel', 'EmergencyPhone', 'FireExtinguisher']
