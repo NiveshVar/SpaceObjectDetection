@@ -238,13 +238,13 @@ space-station-safety-detection/
 
 The system is trained to detect 7 critical safety equipment categories:
 
-1. ** Oxygen Tank** - Life support systems
-2. ** Nitrogen Tank** - Environmental control systems  
-3. ** First Aid Box** - Medical emergency equipment
-4. ** Fire Alarm** - Fire detection and alert systems
-5. ** Safety Switch Panel** - Emergency control interfaces
-6. ** Emergency Phone** - Critical communication devices
-7. ** Fire Extinguisher** - Fire suppression equipment
+1. **Oxygen Tank** - Life support systems
+2. **Nitrogen Tank** - Environmental control systems  
+3. **First Aid Box** - Medical emergency equipment
+4. **Fire Alarm** - Fire detection and alert systems
+5. **Safety Switch Panel** - Emergency control interfaces
+6. **Emergency Phone** - Critical communication devices
+7. **Fire Extinguisher** - Fire suppression equipment
 
 ---
 
@@ -311,10 +311,10 @@ The system is trained to detect 7 critical safety equipment categories:
 ##  Team & Acknowledgments
 
 ### Development Team
-- **Lead Developer**: [Your Name/Team Name]
-- **AI/ML Engineering**: [Team Members]
-- **System Architecture**: [Team Members]
-- **Testing & Validation**: [Team Members]
+- **Ram Jeeva Sajan I**
+- **Nivesh Varun M**
+- **Santhosh B**
+- **Sunil S**
 
 ### Acknowledgments
 - **Duality AI** for providing the Falcon digital twin platform
