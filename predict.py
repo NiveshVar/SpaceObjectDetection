@@ -5,25 +5,18 @@ import os
 import yaml
 
 
-# Function to predict and save images
 def predict_and_save(model, image_path, output_path, output_path_txt):
-    # Perform prediction
     results = model.predict(image_path,conf=0.5)
 
     result = results[0]
-    # Draw boxes on the image
-    img = result.plot()  # Plots the predictions directly on the image
+    img = result.plot() 
 
-    # Save the result
     cv2.imwrite(str(output_path), img)
-    # Save the bounding box data
     with open(output_path_txt, 'w') as f:
         for box in result.boxes:
-            # Extract the class id and bounding box coordinates
             cls_id = int(box.cls)
             x_center, y_center, width, height = box.xywhn[0].tolist()
             
-            # Write bbox information in the format [class_id, x_center, y_center, width, height]
             f.write(f"{cls_id} {x_center} {y_center} {width} {height}\n")
 
 
@@ -39,7 +32,6 @@ if __name__ == '__main__':
             print("No test field found in yolo_params.yaml, please add the test field with the path to the test images")
             exit()
     
-    # check that the images directory exists
     if not images_dir.exists():
         print(f"Images directory {images_dir} does not exist")
         exit()
@@ -52,7 +44,6 @@ if __name__ == '__main__':
         print(f"Images directory {images_dir} is empty")
         exit()
 
-    # Load the YOLO model
     detect_path = this_dir / "runs" / "detect"
     train_folders = [f for f in os.listdir(detect_path) if os.path.isdir(detect_path / f) and f.startswith("train")]
     if len(train_folders) == 0:
@@ -75,8 +66,7 @@ if __name__ == '__main__':
     model_path = detect_path / train_folders[idx] / "weights" / "best.pt"
     model = YOLO(model_path)
 
-    # Directory with images
-    output_dir = this_dir / "predictions" # Replace with the directory where you want to save predictions
+    output_dir = this_dir / "predictions" 
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Create images and labels subdirectories
@@ -85,12 +75,11 @@ if __name__ == '__main__':
     images_output_dir.mkdir(parents=True, exist_ok=True)
     labels_output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Iterate through the images in the directory
     for img_path in images_dir.glob('*'):
         if img_path.suffix not in ['.png', '.jpg']:
             continue
-        output_path_img = images_output_dir / img_path.name  # Save image in 'images' folder
-        output_path_txt = labels_output_dir / img_path.with_suffix('.txt').name  # Save label in 'labels' folder
+        output_path_img = images_output_dir / img_path.name 
+        output_path_txt = labels_output_dir / img_path.with_suffix('.txt').name  
         predict_and_save(model, img_path, output_path_img, output_path_txt)
 
     print(f"Predicted images saved in {images_output_dir}")
@@ -98,3 +87,4 @@ if __name__ == '__main__':
     data = this_dir / 'yolo_params.yaml'
     print(f"Model parameters saved in {data}")
     metrics = model.val(data=data, split="test")
+
